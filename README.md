@@ -1,10 +1,10 @@
 # ERP-academico
-🍞 PamPam — Sistema Integral de Gestión para Panaderías
+##🍞 PamPam — Sistema Integral de Gestión para Panaderías
 
 PamPam es una solución de software de gestión integral desarrollada para la empresa Bakehouse & Co. El sistema integra en una sola plataforma la automatización del punto de venta, la deducción inteligente de inventario a partir de recetas, el control de costos por desperdicio y la predicción asistida para la producción diaria.
 
 
-😮Características Principales
+##😮Características Principales
 
 El sistema está estructurado bajo tres niveles de sistemas de información:
 
@@ -25,7 +25,7 @@ Costeo de Desperdicio: Cálculo del impacto monetario exacto generado por las me
 Planificación de Producción: Algoritmo de recomendación que analiza el historial de ventas para sugerir la cantidad óptima de pan a hornear al día siguiente, reduciendo la sobreproducción.
 
 
-📁 Estructura del Proyecto
+##📁 Estructura del Proyecto
 
 PamPam/
 
@@ -45,7 +45,7 @@ PamPam/
 
 
 
-🛠️ Requisitos del Sistema
+##🛠️ Requisitos del Sistema
 
 Lenguaje: Python 3.10 o superior (Probado en Python 3.14).
 
@@ -54,7 +54,7 @@ Base de Datos: SQLite3 (incluido en la biblioteca estándar de Python).
 Dependencias: Verificadas e integradas mediante la sintaxis nativa de Python.
 
 
-💻 Instalación y Ejecución
+##💻 Instalación y Ejecución
 
 Clonar o descomprimir el proyecto:
 Asegúrate de tener todos los archivos dentro del directorio PamPam/.
@@ -69,9 +69,3 @@ Ejecutar pruebas de inicio de sesión:
 Para verificar la funcionalidad de autenticación y roles de usuario:
 
 python test_login.py
-
-
-
-🏢 Organización
-
-Cliente / Proyecto: Bakehouse y Co.
