@@ -27,11 +27,17 @@ Planificación de Producción: Algoritmo de recomendación que analiza el histor
 
 PamPam/
 ├── pampam_app.py                # Aplicación principal y punto de entrada de la interfaz/lógica
+
 ├── usuarios.py                  # Módulo de administración de usuarios, roles y autenticación
+
 ├── test_login.py                # Script de pruebas para validación del inicio de sesión
+
 ├── pampam.db                    # Base de datos principal en SQLite
+
 ├── pampam_respaldo_20261101.db  # Copia de seguridad de la base de datos
+
 ├── README.md                    # Documentación del proyecto
+
 └── __pycache__/                 # Archivos de caché compilados de Python
 
 
