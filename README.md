@@ -26,6 +26,7 @@ Planificación de Producción: Algoritmo de recomendación que analiza el histor
 📁 Estructura del Proyecto
 
 PamPam/
+
 ├── pampam_app.py                # Aplicación principal y punto de entrada de la interfaz/lógica
 
 ├── usuarios.py                  # Módulo de administración de usuarios, roles y autenticación
