@@ -3,6 +3,7 @@
 
 PamPam es una solución de software de gestión integral desarrollada para la empresa Bakehouse & Co. El sistema integra en una sola plataforma la automatización del punto de venta, la deducción inteligente de inventario a partir de recetas, el control de costos por desperdicio y la predicción asistida para la producción diaria.
 
+
 😮Características Principales
 
 El sistema está estructurado bajo tres niveles de sistemas de información:
@@ -23,6 +24,7 @@ Costeo de Desperdicio: Cálculo del impacto monetario exacto generado por las me
 
 Planificación de Producción: Algoritmo de recomendación que analiza el historial de ventas para sugerir la cantidad óptima de pan a hornear al día siguiente, reduciendo la sobreproducción.
 
+
 📁 Estructura del Proyecto
 
 PamPam/
@@ -42,6 +44,7 @@ PamPam/
 └── __pycache__/                 # Archivos de caché compilados de Python
 
 
+
 🛠️ Requisitos del Sistema
 
 Lenguaje: Python 3.10 o superior (Probado en Python 3.14).
@@ -49,6 +52,7 @@ Lenguaje: Python 3.10 o superior (Probado en Python 3.14).
 Base de Datos: SQLite3 (incluido en la biblioteca estándar de Python).
 
 Dependencias: Verificadas e integradas mediante la sintaxis nativa de Python.
+
 
 💻 Instalación y Ejecución
 
@@ -65,6 +69,7 @@ Ejecutar pruebas de inicio de sesión:
 Para verificar la funcionalidad de autenticación y roles de usuario:
 
 python test_login.py
+
 
 
 🏢 Organización
