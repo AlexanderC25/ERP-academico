@@ -1,71 +1,144 @@
-# ERP-academico
-🍞 PamPam — Sistema Integral de Gestión para Panaderías
+<div align="center">
 
-PamPam es una solución de software de gestión integral desarrollada para la empresa Bakehouse & Co. El sistema integra en una sola plataforma la automatización del punto de venta, la deducción inteligente de inventario a partir de recetas, el control de costos por desperdicio y la predicción asistida para la producción diaria.
+# 🍞 PamPam — Sistema ERP para Panaderías
 
+[![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.14-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Database](https://img.shields.io/badge/database-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Client](https://img.shields.io/badge/Cliente-Bakehouse%20%26%20Co.-D97706?style=for-the-badge&logo=storefront&logoColor=white)](#)
+[![Status](https://img.shields.io/badge/Estado-En_Desarrollo-green?style=for-the-badge)](#)
 
-😮Características Principales
+*Sistema Integral de Gestión de Inventario, Control de Procesos Operativos y Soporte a Decisiones para Redes de Panadería.*
 
-El sistema está estructurado bajo tres niveles de sistemas de información:
+[Descripción](#-acerca-del-sistema) • [Arquitectura](#-arquitectura-del-sistema) • [Características](#-características-principales) • [Instalación](#-instalación-y-uso) • [Autores](#-equipo-de-desarrollo)
 
-1. Sistema de Procesamiento de Transacciones (TPS)
+---
 
-Ventas en Caja: Registro rápido de transacciones diarias.
+</div>
 
-Inventario Automatizado: Descuento automático de materia prima (harina, huevos, azúcar, etc.) según las recetas vinculadas a cada producto vendido.
+## 📌 Acerca del Sistema
 
-2. Sistema de Información Gerencial (MIS)
+**PamPam** es un sistema ERP liviano diseñado específicamente para cubrir las necesidades operativas y estratégicas de **Bakehouse y Co.** 
 
-Control de Mermas: Registro de productos no vendidos al finalizar la jornada.
+Conecta directamente el terminal de punto de venta (POS) en caja con la administración corporativa en oficina, permitiendo automatizar el control de materias primas en tiempo real, calcular pérdidas financieras por desperdicio y predecir el volumen óptimo de horneado diario.
 
-Costeo de Desperdicio: Cálculo del impacto monetario exacto generado por las mermas operativas.
+> [!NOTE]
+> **¿Por qué es un ERP?**  
+> PamPam integra en una sola base de datos centralizada múltiples áreas de la empresa (Ventas, Inventario, Costos y Producción). La información generada en una transacción actualiza en tiempo real los inventarios de insumos y retroalimenta los modelos de predicción de producción.
 
-3. Sistema de Soporte a Decisiones (DSS)
+---
 
-Planificación de Producción: Algoritmo de recomendación que analiza el historial de ventas para sugerir la cantidad óptima de pan a hornear al día siguiente, reduciendo la sobreproducción.
+## 🏗️ Arquitectura del Sistema
 
+El sistema implementa una arquitectura basada en **3 Niveles de Información de Negocio**:
 
-📁 Estructura del Proyecto
+```mermaid
+graph TD
+    subgraph TPS ["1. TPS (Procesamiento de Transacciones)"]
+        A[🛒 Registro de Ventas en Caja] --> B[📋 Consulta de Recetas]
+        B --> C[📉 Descuento Automático de Insumos]
+    end
 
+    subgraph MIS ["2. MIS (Información Gerencial)"]
+        D[⚠️ Registro Diario de Mermas] --> E[💰 Cálculo de Pérdida en Dinero]
+        E --> F[📊 Reportes Gerenciales Consolidados]
+    end
+
+    subgraph DSS ["3. DSS (Soporte a Decisiones)"]
+        G[📈 Historico de Ventas Diarias] --> H[🤖 Algoritmo de Proyección]
+        H --> I[🍞 Recomendación de Horneado Diaria]
+    end
+
+    C --> G
+    F --> H
+```
+
+---
+
+## ✨ Características Principales
+
+### 🛒 1. Control Transaccional de Ventas e Inventario (TPS)
+- **Registro en Caja:** Interfaz ágil para la captura de ventas diarias.
+- **Descuento por Receta:** Deducción automática e inmediata de insumos (*harina, azúcar, huevos, mantequilla*) según las formulaciones de cada producto.
+- **Prevención de Quiebres:** Mantiene el control continuo para evitar desabastecimiento de materias primas a mitad de jornada.
+
+### 📊 2. Reporte de Mermas y Costos Operativos (MIS)
+- **Control de Desperdicios:** Registro de productos no vendidos al cierre del turno.
+- **Valorización Monetaria:** Conversión automática de productos desechados a costo real de ingredientes para evaluación administrativa.
+
+### 🤖 3. Planificación Predictiva de Producción (DSS)
+- **Sugerencia de Horneado:** Motor de recomendación para la producción del día siguiente basado en tendencias históricas.
+- **Reducción de Pérdidas:** Disminución proactiva de la sobreproducción y optimización del rendimiento de materias primas.
+
+---
+
+## 📁 Estructura del Repositorio
+
+```bash
 PamPam/
+├── 📄 README.md                    # Documentación principal del repositorio
+├── 🐍 pampam_app.py                # Script principal (UI + Lógica TPS/MIS/DSS)
+├── 👥 usuarios.py                  # Módulo de autenticación, roles y seguridad
+├── 🧪 test_login.py                # Suite de pruebas automatizadas para autenticación
+├── 🗄️ pampam.db                    # Base de datos relacional (SQLite)
+└── 💾 pampam_respaldo_20261101.db  # Backup histórico de producción
+```
 
-├── pampam_app.py                # Aplicación principal y punto de entrada de la interfaz/lógica
+---
 
-├── usuarios.py                  # Módulo de administración de usuarios, roles y autenticación
+## 💻 Requisitos Técnicos
 
-├── test_login.py                # Script de pruebas para validación del inicio de sesión
+| Componente | Especificación Mínima | Recomendada |
+| :--- | :--- | :--- |
+| **Runtime** | Python 3.10+ | Python 3.14 |
+| **Base de Datos** | SQLite 3 | SQLite 3 (Nativa de Python) |
+| **GUI Framework** | Tkinter / GUI estándar | Tkinter |
+| **OS** | Windows 10+ / macOS / Linux | Windows 11 / Linux |
 
-├── pampam.db                    # Base de datos principal en SQLite
+---
 
-├── pampam_respaldo_20261101.db  # Copia de seguridad de la base de datos
+## 🚀 Instalación y Uso
 
-├── README.md                    # Documentación del proyecto
+### 1. Clonar el repositorio
 
-└── __pycache__/                 # Archivos de caché compilados de Python
+```bash
+git clone https://github.com/tu-usuario/PamPam.git
+cd PamPam
+```
 
+### 2. Ejecutar la Aplicación
 
+No se requieren dependencias externas complejas. Simplemente ejecuta el punto de entrada con Python:
 
-🛠️ Requisitos del Sistema
-
-Lenguaje: Python 3.10 o superior (Probado en Python 3.14).
-
-Base de Datos: SQLite3 (incluido en la biblioteca estándar de Python).
-
-Dependencias: Verificadas e integradas mediante la sintaxis nativa de Python.
-
-
-💻 Instalación y Ejecución
-
-Clonar o descomprimir el proyecto:
-Asegúrate de tener todos los archivos dentro del directorio PamPam/.
-
-Ejecutar la aplicación:
-Abre una terminal en la carpeta del proyecto y ejecuta:
-
+```bash
 python pampam_app.py
+```
 
+### 3. Ejecutar Pruebas Automatizadas
 
-Ejecutar pruebas de inicio de sesión:
-Para verificar la funcionalidad de autenticación y roles de usuario:
+Para validar las funciones de control de acceso y autenticación de usuarios:
 
+```bash
 python test_login.py
+```
+
+---
+
+## 🛡️ Seguridad y Buenas Prácticas
+
+> [!WARNING]
+> Asegúrate de **no incluir** el archivo `pampam.db` en tus commits de producción si contiene credenciales de prueba o datos reales no cifrados. Se recomienda incluir los archivos `.db` en tu `.gitignore` personal.
+
+---
+
+## 👨‍💻 Equipo de Desarrollo
+
+| Contribuidor |
+| :--- |
+| **David Hernández** |
+| **Sebastián Boada** |
+| **Nicolas Centeno** |
+---
+
+<div align="center">
+  <sub>Desarrollado para <b>Bakehouse y Co.</b> — 2026</sub>
+</div>
