@@ -101,7 +101,7 @@ PamPam/
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/PamPam.git
+git clone (https://github.com/AlexanderC25/ERP-academico.git)
 cd PamPam
 ```
 
