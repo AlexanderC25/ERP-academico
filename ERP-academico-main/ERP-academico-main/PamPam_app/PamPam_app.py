@@ -1,1 +1,0 @@
-print("Vamos a hacer en este repositorio")
